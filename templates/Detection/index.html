@@ -1,0 +1,11 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'Detection/style.css' %}" />
+{% if human_list %}
+<ul>
+    {% for Video in human_list %}
+    <li>{{ Video.filename }} {{ Video.timestamp }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No Videos are available.</p>
+{% endif %}
